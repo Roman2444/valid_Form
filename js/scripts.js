@@ -13,7 +13,7 @@ form.addEventListener('input', function(e){
 form.addEventListener('submit', function(e){
     let err = false 
     // проверка на ошибку, чтобы e.preventDefault() срабатывал 1 раз 
-    //и было только 1 предупреждение
+    //и был только 1 alert
 
     for(let i=0; i<checks.length; i++){
         if (!checks[i].value){
@@ -27,7 +27,5 @@ form.addEventListener('submit', function(e){
     }
 
     })
-
-
 
 });
