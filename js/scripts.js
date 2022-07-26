@@ -9,7 +9,7 @@ let patterns = {
     email: /^.+@.+\..+$/
 };
 
-form.addEventListener('input', function(e){
+form.addEventListener('focusin', function(e){
     if (e.target.classList.contains('check')){
         e.target.classList.remove('err')
     }
