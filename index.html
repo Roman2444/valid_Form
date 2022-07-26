@@ -8,9 +8,10 @@
 	</head>
 	<body>
 		<form class="form">
-			Имя<br><input type="text" name="name" class="check"><br>
-			Телефон<br><input type="text" name="phone" class="check"><br>
-			Почта<br><input type="text" name="email" class="check"><br>
+			Имя<br><input type="text" name="name" class="check" data-valid="notEmpty"><br>
+			Фамилия<br><input type="text" name="name" class="check" data-valid="notEmpty"><br>
+			Телефон<br><input type="text" name="phone" class="check" data-valid="phone"><br>
+			Почта<br><input type="text" name="email" class="check" data-valid="email"><br>
 			<input class="send" type="submit" value="Отправить">
 		</form>
 		<script src="js/scripts.js"></script>

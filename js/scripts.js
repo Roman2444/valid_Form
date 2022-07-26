@@ -3,6 +3,11 @@ window.addEventListener('load', function(){
 let form = document.querySelector('.form')
 let send = document.querySelector('.send')
 let checks = document.querySelectorAll('.check')
+let patterns = {
+    notEmpty: /^.+/,
+    phone: /^\d{7,14}$/,
+    email: /^.+@.+\..+$/
+};
 
 form.addEventListener('input', function(e){
     if (e.target.classList.contains('check')){
@@ -16,8 +21,12 @@ form.addEventListener('submit', function(e){
     //и был только 1 alert
 
     for(let i=0; i<checks.length; i++){
-        if (!checks[i].value){
-            checks[i].classList.add('err')
+        let inp = checks[i];
+        inp.value = inp.value.trim();
+        let pattern = patterns[inp.dataset.valid];
+
+        if (!pattern.test(inp.value)){
+            inp.classList.add('err');
             err = true 
         }  
     }
